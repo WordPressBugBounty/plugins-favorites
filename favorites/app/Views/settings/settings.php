@@ -1,5 +1,5 @@
 <div class="wrap">
-	<h1><?php echo $this->plugin_name . ' '; _e('Settings', 'favorites'); ?></h1>
+	<h1><?php _e('Favorites Settings', 'favorites'); ?></h1>
 
 	<h2 class="nav-tab-wrapper">
 		<a class="nav-tab <?php if ( $tab == 'general' ) echo 'nav-tab-active'; ?>" href="options-general.php?page=simple-favorites">
@@ -14,7 +14,7 @@
 	</h2>
 
 	<form method="post" enctype="multipart/form-data" action="options.php">
-		<?php include(Favorites\Helpers::view('settings/settings-' . $tab)); ?>
+		<?php include(Favorites\Helpers::view('settings-' . $tab, 'settings')); ?>
 		<?php submit_button(); ?>
 	</form>
 </div><!-- .wrap -->
